@@ -18,6 +18,9 @@
 	        <li class="nav-item">
 	          <a class="nav-link active" aria-current="page" href="https://www.onlyxcodes.com/2022/08/spring-mvc-hibernate-crud-example-with-maven.html">Back to Tutorial</a>
 	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="view-filler">ViewFiller</a>
+	        </li>
 	      </ul>
 	    </div>
 	  </div>
@@ -44,8 +47,8 @@
 			  	<c:forEach items="${companies}" var="str">
 				    <tr>
 				      <th scope="row">${str.id}</th>
-				      <td>${str.name}</td>
-				      <td>${str.headquarter}</td>
+				      <td>${str.denumire}</td>
+				      <td>${str.adress}</td>
 				      <td><a href="update/${str.id}"><i class="fas fa-edit"></i></a></td>
 				      <td><a href="delete/${str.id}"><i class="fas fa-trash-alt text-danger"></i></a></td>
 				    </tr>

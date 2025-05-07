@@ -5,8 +5,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.eurovending.dao.CompanyDao;
+import org.eurovending.dao.FillerDAO;
 import org.eurovending.dao.UserDao;
 import org.eurovending.model.Company;
+import org.eurovending.model.Filler;
 import org.eurovending.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,10 +28,14 @@ public class CompanyController {
 	private CompanyDao companyDao;
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private FillerDAO fillerDao;
+	private Filler filler = new Filler("stelian", "0745", "2023-10-01");
 	
 	@RequestMapping("/")
 	public String home(Model model)
 	{
+		//fillerDao.createFiller(filler);
 		List<Company> company= companyDao.getAllCompany();
 		List<Users> users = userDao.getAllUsers();
 		model.addAttribute("companies", company);

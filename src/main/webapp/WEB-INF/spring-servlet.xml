@@ -63,6 +63,7 @@
                 <value>org.eurovending.model.Company</value>
                  <value>org.eurovending.model.Users</value>
                  <value>org.eurovending.model.MachineInterface</value>
+                 <value>org.eurovending.model.Filler</value>
                 
             </list>
         </property>

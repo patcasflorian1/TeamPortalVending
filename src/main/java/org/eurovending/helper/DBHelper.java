@@ -11,8 +11,8 @@ public class DBHelper {
 					Properties connectionsProps = new Properties();
 					connectionsProps.put("user", "root");
 					//connectionsProps.put("user", "electros_root");
-					//connectionsProps.put("password", "*2Go9x}cZ_M}");
-					connectionsProps.put("password", "wcv_pT273l(B"); //Pass Mysql birou
+					connectionsProps.put("password", "*2Go9x}cZ_M}");
+					//connectionsProps.put("password", "wcv_pT273l(B"); //Pass Mysql birou
 					//connectionsProps.put("password", "azmkCgSu941x#"); //MySql europartsvending wan
 					//connectionsProps.put("password", "Uk6J2D27u0No#"); //Pass Mysql inoviSmartApp
 					

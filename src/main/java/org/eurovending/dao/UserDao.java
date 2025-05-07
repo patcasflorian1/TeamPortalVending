@@ -33,4 +33,9 @@ public class UserDao {
 	public Users getSingleUser(int idUser) {
 		return this.hibernateTemplate.get(Users.class, idUser);
 	}
+	
+	@Transactional
+	public void updateUser(Users user) {
+		this.hibernateTemplate.update(user);
+	}
 }

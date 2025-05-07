@@ -1,5 +1,7 @@
 package org.eurovending.controller;
 
+import java.sql.SQLException;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.eurovending.dao.ConfigMachineDao;
@@ -21,6 +23,7 @@ public class UsersController {
 private UserDao userDao;
 ConfigMachine configMachine = new ConfigMachine("Solista", 1,"Expresso", "CafeaBoabe", 8.5);
 private ConfigMachineDao configMachineDao = new ConfigMachineDao();
+
 @RequestMapping("/add-user")
 public String addUser(Model model) {
 	
@@ -29,9 +32,10 @@ public String addUser(Model model) {
 }
 
 @RequestMapping(value="/submit-user",method=RequestMethod.POST)
-public RedirectView handleUsers(@ModelAttribute Users user,HttpServletRequest request) {
+public RedirectView handleUsers(@ModelAttribute Users user,HttpServletRequest request) throws SQLException {
 	userDao.createUser(user);
-	configMachineDao.createConfigMachine(configMachine);
+	//configMachineDao.createConfigMachine(configMachine);
+	configMachineDao.insertConfigMachine(configMachine);
 	RedirectView redirectView = new RedirectView();
 	redirectView.setUrl(request.getContextPath()+"/");
 	return redirectView;	

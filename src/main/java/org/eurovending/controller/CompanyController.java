@@ -30,8 +30,6 @@ public class CompanyController {
 	private UserDao userDao;
 	@Autowired
 	private FillerDAO fillerDao;
-	private Filler filler = new Filler("stelian", "0745", "2023-10-01");
-	
 	@RequestMapping("/")
 	public String home(Model model)
 	{
@@ -42,6 +40,18 @@ public class CompanyController {
 		model.addAttribute("users", users);
 		return "index";
 	}
+	@RequestMapping("/home")
+	public String homeFiller(Model model)
+	{
+		
+				List<Company> company= companyDao.getAllCompany();
+				List<Users> users = userDao.getAllUsers();
+				model.addAttribute("companies", company);
+				model.addAttribute("users", users);
+				return "index";
+	}
+	
+	
 	
 	//shows add company form 
 	@RequestMapping("/add-company")

@@ -20,10 +20,6 @@ public class FillerController {
 	@RequestMapping("/view-filler")
 	public String viewFiller(Model model) {
 		fillers = fillerDao.getAllFillers();
-		for (Filler filler : fillers) {
-			System.out.println(filler);
-		}
-		
 		model.addAttribute("fillers", fillers);
 		return "view_filler";
 	}
@@ -43,6 +39,37 @@ public class FillerController {
 		return "view_filler";
 	}
 	//update filler
+	@RequestMapping("/update-filler")
+	public String updateFiller(Model model) {
+		fillers = fillerDao.getAllFillers();
+		for (Filler filler : fillers) {
+			System.out.println(filler);
+		}
+		
+		model.addAttribute("fillers", fillers);
+		return "update_filler";
+	}
+	//handle update filler form request
+	@RequestMapping(value="/submit-update-filler")
+	public String handleUpdateFiller(Filler filler, Model model) {
+		fillerDao.createOrUpdateFiller(filler);
+		fillers = fillerDao.getAllFillers();
+		
+		model.addAttribute("fillers", fillers);
+		return "view_filler";
+	}
+	//delete filler
+	@RequestMapping("/delete-filler")
+	public String deleteFiller(Model model) {
+		fillers = fillerDao.getAllFillers();
+		for (Filler filler : fillers) {
+			System.out.println(filler);
+		}
+		
+		model.addAttribute("fillers", fillers);
+		return "delete_filler";
+	}
+	
 	
 	
 }

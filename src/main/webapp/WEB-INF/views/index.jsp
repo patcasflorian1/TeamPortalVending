@@ -21,6 +21,21 @@
 	         <li class="nav-item">
 	          <a class="nav-link active" aria-current="page" href="view-filler">ViewFiller</a>
 	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="view-element">ViewElement</a>
+	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="view-new-machine">ViewNewMachine</a>
+	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="view-client">View Client</a>
+	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="view-machine-serial">View Machine Serial</a>
+	        </li>
+	         <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="view-product">View Product</a>
+	        </li>
 	      </ul>
 	    </div>
 	  </div>

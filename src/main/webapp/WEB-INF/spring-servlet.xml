@@ -64,7 +64,11 @@
                  <value>org.eurovending.model.Users</value>
                  <value>org.eurovending.model.MachineInterface</value>
                  <value>org.eurovending.model.Filler</value>
-                
+                <value>org.eurovending.model.Element</value>
+                <value>org.eurovending.model.NewMachine</value>
+                <value>org.eurovending.model.Client</value>
+                <value>org.eurovending.model.MachineSerial</value>
+                <value>org.eurovending.model.Product</value>
             </list>
         </property>
 		

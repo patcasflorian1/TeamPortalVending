@@ -9,7 +9,6 @@ import javax.persistence.Transient;
 @Entity
 public class Users {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@Column  (name="name", nullable = false, length = 256) 
 	private String name;

@@ -1,5 +1,6 @@
 package org.eurovending.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +12,7 @@ public class Company {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	@Column(name = "denumire", nullable = false, length = 256)
 	private String denumire; // denumire societate
 	private String nrONRC; // numar inregistrare onrc
 	private String cui; // cui firma
